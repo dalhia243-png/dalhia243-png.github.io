@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sector Horror</title>
+<meta name="description" content="Sector Horror — jeu d'horreur et d'exploration, jouable dans le navigateur.">
+<style>
+  :root { --bg: #07070a; --panel: #111117; --text: #e8e2d8; --muted: #9b958b; --accent: #b3261e; --accent2: #e0a84f; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+    background: radial-gradient(ellipse at 50% 30%, #1a1416 0%, var(--bg) 65%); }
+  main { width: 100%; max-width: 640px; text-align: center; }
+  h1 { font-size: clamp(2.4rem, 9vw, 4.6rem); letter-spacing: 0.22em; margin: 0 0 4px; font-weight: 800;
+    text-shadow: 0 0 24px rgba(179, 38, 30, 0.55), 0 0 2px #000; }
+  .sub { color: var(--muted); letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 36px; }
+  .play { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+    font-size: 1.25rem; letter-spacing: 0.12em; padding: 16px 44px; border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 10px 40px rgba(179, 38, 30, 0.35); transition: transform .15s, filter .15s; }
+  .play:hover, .play:focus-visible { transform: translateY(-1px); filter: brightness(1.12); outline: none; }
+  .tips { margin: 40px auto 0; background: var(--panel); border: 1px solid #1f1f28; border-radius: 10px;
+    padding: 18px 20px; text-align: left; font-size: 0.95rem; line-height: 1.55; color: #cfc9be; }
+  .tips h2 { font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent2); margin: 0 0 10px; }
+  .tips ul { margin: 0 0 14px; padding-left: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  td { padding: 4px 6px; border-top: 1px solid #1f1f28; vertical-align: top; }
+  td:first-child { color: var(--accent2); white-space: nowrap; width: 38%; }
+  footer { margin-top: 22px; color: #5d5952; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>SECTOR HORROR</h1>
+  <div class="sub">Version navigateur</div>
+  <a class="play" href="sector-horror/">▶&nbsp;&nbsp;JOUER</a>
+  <section class="tips">
+    <h2>Avant de jouer</h2>
+    <ul>
+      <li>Sur ordinateur, avec Chrome, Edge ou Firefox récent. Un casque, c'est mieux.</li>
+      <li>Le premier chargement prend un moment (environ 50&nbsp;Mo), les suivants sont rapides.</li>
+      <li>Cliquez dans le jeu pour prendre la souris, <b>Échap</b> pour la libérer.</li>
+    </ul>
+    <h2>Commandes</h2>
+    <table>
+      <tr><td>ZQSD / flèches</td><td>Se déplacer</td></tr>
+      <tr><td>Maj</td><td>Courir</td></tr>
+      <tr><td>C</td><td>S'accroupir</td></tr>
+      <tr><td>Espace</td><td>Sauter</td></tr>
+      <tr><td>Clic gauche / droit</td><td>Tirer / viser</td></tr>
+      <tr><td>R</td><td>Recharger</td></tr>
+      <tr><td>E</td><td>Interagir, fouiller</td></tr>
+      <tr><td>Tab ou I</td><td>Sac à dos</td></tr>
+      <tr><td>M</td><td>Grande carte</td></tr>
+      <tr><td>F</td><td>Lampe torche</td></tr>
+    </table>
+  </section>
+  <footer>Fait avec Godot 4.7</footer>
+</main>
+</body>
+</html>
