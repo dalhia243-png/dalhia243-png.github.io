@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sector Horror — paiement</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0d0b09; color: #eee3d0;
+         font-family: system-ui, -apple-system, "Segoe UI", sans-serif; padding: 16px; box-sizing: border-box; }
+  main { max-width: 34rem; text-align: center; border: 1px solid #5a4630; background: #17130f; padding: 32px 24px; border-radius: 10px; }
+  h1 { font-size: 1.6rem; margin: 0 0 12px; color: #8ef2ff; letter-spacing: 0.04em; }
+  p { line-height: 1.55; margin: 10px 0; }
+  .muted { color: #a59a8a; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Paiement reçu, merci !</h1>
+  <p id="text">Retournez dans l'onglet du jeu : à l'ordinateur de la maison, onglet « Boutique éternelle »,
+     cliquez sur « Vérifier mes achats ». Vos objets éternels arrivent dans le coffre.</p>
+  <p class="muted">Vous pouvez fermer cet onglet.</p>
+</main>
+<script>
+  if (new URLSearchParams(location.search).has("annule")) {
+    document.getElementById("title").textContent = "Paiement annulé";
+    document.getElementById("text").textContent = "Rien n'a été débité. Vous pouvez fermer cet onglet et retourner dans le jeu.";
+  }
+</script>
+</body>
+</html>
